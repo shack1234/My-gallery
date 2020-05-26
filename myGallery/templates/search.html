@@ -1,0 +1,85 @@
+{%extends 'base.html'%} 
+{% block content %}
+{{block.super}}
+<!-- Landing Page -->
+<div class="banner">
+    <div class="cover">
+        <div class="container image">
+            <h2 id="category">A photograph shouldn't be just a picture, it should be a philosophy</h2>
+             <form class="navbar-form" role="search" action="{% url 'search_results' %}">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search by category" name="image">
+                <div class="input-group-btn">
+                  <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                </div>
+              </div>
+               <br><br>
+                 <small style="color:azure"> Trending: flower, wallpapers, backgrounds, happy, love</small>
+               </form>
+            <p>Enjoy these picture  and don’t forget to share  with your friends and family!  </p>
+        </div>
+    </div>
+</div>
+<hr>
+  <div class="container">
+    <div class="row">
+      {% if images%}
+        <h2> {{message}}  Photos</h2>
+      {% else %}
+        <h2> Found 0 photo for the search term {{message}}</h2>
+      {% endif %}
+    </div>
+    <hr>
+  </div>
+  <div class="container">
+  <div class="card-columns">
+   {% for image in images %}
+        <div class="col-md-4 image-box">
+            <div class="card">
+                <img class="card-img-top " src="{{image.image.url}}" width="300px" height="300px" alt="Card image cap" data-toggle="modal" data-target="#{{ image.id }}">
+            <!--Modal: modalRelatedContent-->
+                <div class="modal fade center" id="{{ image.id }}" tabindex="-1" role="dialog"
+                aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
+                <div class="modal-dialog modal-side modal-bottom-right modal-notify modal-info" role="document">
+                    <!--Content-->
+                    <div class="modal-content">
+                    <!--Header-->
+                    <div class="modal-header">
+                        <p class="heading">{{image.name}}</p>
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="white-text">&times;</span>
+                        </button>
+                    </div>
+                <!--Body-->
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-md-4">
+                          <img src="{{image.image.url}}" height="200px" width="250px" data-toggle="modal"
+                          class="img-fluid" alt="">
+                      </div>
+                      <div class="col-md-2"></div>
+                      <div class="col-md-6">
+                          <p><strong>Location {{image.location}}</strong></p>
+                          <p>Description {{image.description}}</p>
+                          <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" onclick="copy('img{{image.id}}')">Copy Link</button>
+                      </div>
+                      </div>
+                  </div>
+                </div>
+            </div>
+           </div>
+         </div>
+  <!--Modal: modalRelatedContent-->
+      </div>
+     </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
+
+
+
+
+ 
