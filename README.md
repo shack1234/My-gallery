@@ -1,19 +1,17 @@
 # Project Name
 
  Maestro Gallery
----
 
 ## Description
 
----
 A python project that allows a user to search photos by location, category and be able to see the photo details
 
 ## Created by
-Shadrack Anayo
----
+  - Shadrack Anayo
+
 ## Live demo
 
-<//>
+<https://myalbum-app.herokuapp.com/>
 ---
 ## User Stories
 - The home page allows users to see various images:
