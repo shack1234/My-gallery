@@ -1,5 +1,5 @@
 asgiref==3.2.7
-config==0.3.9
+config==0.5.0.post0
 dj-database-url==0.5.0
 Django==1.11.5
 django-bootstrap3==12.1.0
