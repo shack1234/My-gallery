@@ -7,7 +7,7 @@
 A python project that allows a user to search photos by location, category and be able to see the photo details
 
 ## Created by
-  - Shadrack Anayo
+- Shadrack Anayo
 
 ## Live demo
 
@@ -49,8 +49,8 @@ In the same terminal type: python3 manage.py runserver
 ## Testing the Application
 To run the tests, on your terminal:
 
-  $ python3.6 manage.py test <appname>
----
+  $ python3.6 manage.py test <myGallery>
+
 
 ## Licence
 MIT © 2020, Shadrack Anayo
