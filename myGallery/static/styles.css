@@ -29,6 +29,7 @@
 .modal-dialog {
     display: block;
     text-align: left;
+    
 }
 .image-box img {
     transition: all 0.3s;
@@ -40,11 +41,13 @@
     position: relative;
     margin: auto;
     overflow: hidden;
+    
 }
 .modal {
     text-align: center;
     padding: 0!important;
     position: fixed;
+    
 }
 /*--Banner--*/
 div.container.image{
