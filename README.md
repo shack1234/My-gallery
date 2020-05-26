@@ -6,7 +6,7 @@
 ## Description
 
 ---
-A python project that allows a user to write a pitch in one minute time to impress someone
+A python project that allows a user to search photos by location, category and be able to see the photo details
 
 ## Created by
 Shadrack Anayo
