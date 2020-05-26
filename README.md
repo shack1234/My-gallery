@@ -12,7 +12,7 @@ A python project that allows a user to search photos by location, category and b
 ## Live demo
 
 <https://myalbum-app.herokuapp.com/>
----
+
 ## User Stories
 - The home page allows users to see various images:
 - User can see all images per location they were taken
