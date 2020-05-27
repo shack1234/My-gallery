@@ -18,6 +18,7 @@ A python project that allows a user to search photos by location, category and b
 - User can see all images per location they were taken
 - Users can also search for images based categories
 - Admin can upload images from a django dashboard
+
 ## Set-up and Installation
 Prerequsites
 - Python 3.6
@@ -48,9 +49,7 @@ In the same terminal type: python3 manage.py runserver
 
 ## Testing the Application
 To run the tests, on your terminal:
-
   $ python3.6 manage.py test <myGallery>
-
 
 ## Licence
 MIT © 2020, Shadrack Anayo
